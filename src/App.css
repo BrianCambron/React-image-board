@@ -1,6 +1,10 @@
 .img-style{
-  width: 30%;
+  width: 60%;
 }
 .list-style{
   list-style: none;
+}
+.ul-style{
+  display: flex;
+  flex-wrap: wrap;
 }

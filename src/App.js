@@ -21,7 +21,7 @@ class ImageForm extends Component {
   }
   render() {
     return(
-      <form className ="col" onSubmit={this.handleSubmit}>
+      <form className ="container" onSubmit={this.handleSubmit}>
         <div className="form-group">
           <label htmlFor="url">Image Url</label>
           <input type="url" className="form-control" id="url" name="url" value={this.state.url} onChange={this.handleInput}/>
@@ -35,13 +35,11 @@ class ImageForm extends Component {
 }
 class ImageList extends Component {
   render() {
-    const images = this.props.images.map((image, index) => <li className="list-style"key={index}><img className="img-style"src={image.url} alt=""/><p>{image.caption}</p></li>)
+    const images = this.props.images.map((image, index) => <li className="col-4 list-style"key={index}><img className="img-style"src={image.url} alt=""/><p>{image.caption}</p></li>)
     return(
-    <div className="container">
-    <ul>
+    <ul className="row ul-style">
     {images}
     </ul>
-    </div>
     )
   }
 }
