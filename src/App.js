@@ -18,6 +18,7 @@ class ImageForm extends Component {
   handleSubmit(event){
     event.preventDefault();
     this.props.addImage(this.state);
+    this.setState({url:'', caption:''});
   }
   render() {
     return(
