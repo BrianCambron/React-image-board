@@ -35,11 +35,13 @@ class ImageForm extends Component {
 }
 class ImageList extends Component {
   render() {
-    const images = this.props.images.map((image, index) => <li className="col-4 list-style"key={index}><img className="img-style"src={image.url} alt=""/><p>{image.caption}</p></li>)
+    const images = this.props.images.map((image, index) => <li className="col-12 col-md-4 list-style"key={index}><img className="img-style"src={image.url} alt=""/><p>{image.caption}</p></li>)
     return(
+    <div className="container">
     <ul className="row ul-style">
     {images}
     </ul>
+    </div>
     )
   }
 }
